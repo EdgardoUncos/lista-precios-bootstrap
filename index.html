@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Practica Bootstrapp</title>
+    <style>
+        /*
+        creamos una mediaquerie que defina la clase alto en 100
+        el objetivo es aplicarlo al dflex porque no es responsive en mobilefirst es decir 
+        que la clase que provee bt para alto no funciona bien en mf y solucionamos esto
+        de forma particular a medida */
+        @media(min-width: 992px) {
+        .alto{
+            height: 100vh;
+        }
+    }
+    </style>
+
+</head>
+<body>
+
+    <!-- Pasos: -->
+    <!-- * aplicamos main clases. container, que hace container? text-center d-flex flex-column alto justify-content-center -->
+    <!-- Todo los elementos hijos de main van a ser hijos de flex, h1, p, div-row footer. Objetivo es centrar en el medio de la pantalla -->
+    <!-- justify-content-center alinea verticalmente al ser column 
+            le aplicamos la clase vh-100 ahora el container ocupa el 100% de la pantalla, pero no es responsiva, entonces creamos una clase a
+        medida y la reemplazamos, alto es responsiba -->
+    <main class="container text-center d-flex flex-column alto justify-content-center">
+
+        <h1 class="display-4">Lista de Precios</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ea? Pariatur voluptatibus recusandae quas modi quam necessitatibus ducimus, voluptate accusamus dolorum sunt libero, nesciunt cum quod? Quod eligendi totam beatae.</p>
+        
+        <!-- Todo sistema de columnas tiene que estar en un row al menos, no puede haber columnas sueltas -->
+        <div class="row">
+
+            <article class="col-12 col-md-4 col-lg-4">
+                <!-- hacemos nuestra propia card -->
+                <div class="border border-dark rounded rounded-3">
+                    <p class="mt-5 fw-bold">Basic</p>
+                    <h2 class="display-4">$100</h2>
+                    <p class="font-monospace mt-3">Up to 5 user for free</p>
+                    <ul class="list-unstyled my-5">
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                    </ul>
+                    <a href="#" class="bg-info text-white d-block py-3 text-decoration-none">Acceder</a>
+                </div>
+                <!-- hacemos nuestra propia card -->
+            </article>
+
+            <article class="col-12 col-md-4 col-lg-4 rounded-3">
+                <!-- hacemos nuestra propia card -->
+                <div class="border border-dark rounded bg-dark text-white">
+                    <p class="mt-5 fw-bold">Pro</p>
+                    <h2 class="display-4">$200</h2>
+                    <p class="font-monospace mt-3">Up to 5 user for free</p>
+                    <ul class="list-unstyled my-5">
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                    </ul>
+                    <a href="#" class="bg-info text-white d-block py-3 text-decoration-none">Acceder</a>
+                </div>
+                <!-- hacemos nuestra propia card -->
+            </article>
+
+            <article class="col-12 col-md-4 col-lg-4 rounded-3">
+                <!-- hacemos nuestra propia card -->
+                <div class="border border-dark rounded">
+                    <p class="mt-5 fw-bold">Ultimate</p>
+                    <h2 class="display-4">$300</h2>
+                    <p class="font-monospace mt-3">Up to 5 user for free</p>
+                    <ul class="list-unstyled my-5">
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem, ipsum.</li>
+                    </ul>
+                    <a href="#" class="bg-info text-white d-block py-3 text-decoration-none">Acceder</a>
+                </div>
+                <!-- hacemos nuestra propia card -->
+
+            </article>
+        </div>
+
+        <footer>
+            <p class="mt-5 text-center">Recuerda escribir el codigo.</p>
+        </footer>
+    </main>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
